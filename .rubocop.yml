@@ -1,0 +1,30 @@
+AllCops:
+  RunRailsCops: true
+  Include:
+    - '**/Gemfile'
+    - '**/Rakefile'
+  Exclude:
+   - 'bin/*'
+   - 'db/seeds.rb'
+   - 'db/schema.rb'
+   - 'vendor/bundle/**/*'
+
+Metrics/LineLength:
+  Max: 99
+  AllowURI: true
+
+Metrics/MethodLength:
+  Max: 15
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/AsciiComments:
+  # Use chinese for comments
+  Enabled: false
