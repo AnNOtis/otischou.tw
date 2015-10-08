@@ -10,6 +10,11 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'slim-rails'
 
+gem 'bourbon'
+gem 'bitters'
+gem 'neat'
+gem 'refills'
+
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.0'
