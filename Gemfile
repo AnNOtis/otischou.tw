@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'slim-rails'
+gem 'bcrypt', '~> 3.1.7'
 
 gem 'bourbon'
 gem 'bitters'
