@@ -1,0 +1,7 @@
+nav.navbar.navbar-default
+  .container
+    .navbar-header
+      = link_to backend_root_path, class: 'navbar-brand' do
+        = icon('flag', '後台管理')
+    ul.nav.navbar-nav
+      li = link_to 'articles', backend_articles_path
