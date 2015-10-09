@@ -11,10 +11,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'slim-rails'
 gem 'bcrypt', '~> 3.1.7'
 
-gem 'bourbon'
-gem 'bitters'
-gem 'neat'
-gem 'refills'
+gem 'bootstrap-sass', '~> 3.3.5'
+gem 'font-awesome-sass', '~> 4.4.0'
 
 group :development, :test do
   gem 'byebug'
