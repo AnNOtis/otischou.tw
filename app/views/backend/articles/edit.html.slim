@@ -1,4 +1,18 @@
 = simple_form_for [:backend, @article] do |f|
   = f.input :title
-  = f.input :content
+  = f.input :content, input_html: { id: 'article-editor' }
   = f.submit
+  
+css:
+  .CodeMirror {
+    height: auto;
+    border: 1px solid #aaa;
+    padding: 12px;
+  }
+  
+javascript:
+  CodeMirror.fromTextArea(document.getElementById('article-editor'), {
+    mode: 'gfm',
+    theme: 'default',
+    viewportMargin: Infinity
+  });

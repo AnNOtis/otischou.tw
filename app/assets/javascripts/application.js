@@ -14,3 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require codemirror
+//= require codemirror/addons/mode/overlay
+//= require codemirror/modes/xml
+//= require codemirror/modes/markdown
+//= require codemirror/modes/gfm

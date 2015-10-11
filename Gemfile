@@ -18,6 +18,7 @@ gem 'simple_form'
 
 gem 'kramdown'
 gem 'rouge'
+gem 'codemirror-rails'
 
 group :development, :test do
   gem 'byebug'
