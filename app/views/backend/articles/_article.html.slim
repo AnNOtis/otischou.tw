@@ -1,0 +1,26 @@
+.article-item id="#{dom_id(article)}" class='clearfix'
+  - if article.status == 'publish' 
+    = icon('eye', class: 'article-status')
+  - elsif article.status == 'draft' 
+    = icon('eye-slash', class: 'article-status')
+
+  = link_to article.title, edit_backend_article_path(article), class: 'article-title'
+  .article-date = article.created_at
+  .article-actions
+    = link_to backend_article_path(article), \
+      method: 'delete', 
+      class: 'article-action',
+      data: { confirm: 'Are you sure?' } do 
+      = icon('trash-o')
+    - if article.status != 'publish'
+      = link_to 'publish', \
+        publish_backend_article_path(article), 
+        remote: true, 
+        class: 'article-action',
+        method: :post
+    - if article.status != 'draft'
+      = link_to 'draft', \
+        unpublish_backend_article_path(article), 
+        remote: true, 
+        class: 'article-action',
+        method: :post

@@ -14,6 +14,11 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'font-awesome-sass', '~> 4.4.0'
 
+gem 'simple_form'
+
+gem 'kramdown'
+gem 'rouge'
+
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.0'
@@ -27,4 +32,5 @@ end
 
 group :test do
   gem 'shoulda-matchers'
+  gem 'database_rewinder'
 end

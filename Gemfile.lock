@@ -58,6 +58,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1.1)
+    database_rewinder (0.5.3)
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
     erubis (2.7.0)
@@ -75,6 +76,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.3)
+    kramdown (1.7.0)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -118,6 +120,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rainbow (2.0.0)
     rake (10.4.2)
+    rouge (1.5.1)
     rspec-core (3.3.2)
       rspec-support (~> 3.3.0)
     rspec-expectations (3.3.1)
@@ -151,6 +154,9 @@ GEM
       tilt (>= 1.1, < 3)
     shoulda-matchers (3.0.0)
       activesupport (>= 4.0.0)
+    simple_form (3.1.0)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
     slim (3.0.6)
       temple (~> 0.7.3)
       tilt (>= 1.3.3, < 2.1)
@@ -192,15 +198,19 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.5)
   byebug
   coffee-rails (~> 4.1.0)
+  database_rewinder
   font-awesome-sass (~> 4.4.0)
   jbuilder (~> 2.0)
   jquery-rails
+  kramdown
   pg
   rails (= 4.2.4)
+  rouge
   rspec-rails (~> 3.0)
   rubocop
   sass-rails (~> 5.0)
   shoulda-matchers
+  simple_form
   slim-rails
   spring
   turbolinks

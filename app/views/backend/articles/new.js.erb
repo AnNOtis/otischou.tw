@@ -1,0 +1,3 @@
+$container = $("#modal-container");
+$container.html("<%= j(render('create_article_inline_form')) %>");
+$container.modal({show: true, backdrop: true, keyboard: false});

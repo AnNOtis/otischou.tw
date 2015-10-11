@@ -11,10 +11,26 @@ class Article < ActiveRecord::Base
   has_many :tags
 
   # validation macros
+  validates :title, presence: true
 
   # callback macros
+  before_create :set_default_status
 
   # other macros
 
   # scope macros
+
+  def publish
+    update(status: :publish)
+  end
+
+  def unpublish
+    update(status: :draft)
+  end
+
+  private
+
+  def set_default_status
+    self.status ||= :draft
+  end
 end

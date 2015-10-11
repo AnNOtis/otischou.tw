@@ -1,0 +1,11 @@
+= simple_form_for [:backend, Article.new] do |f|
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h3.modal-title Create Article
+      .modal-body
+        .form-group
+          = f.input :title, placeholder: 'article name', input_html: { class: 'form-control' }
+      .modal-footer
+        button.btn.btn-default type="button" data-dismiss="modal" Close
+        = f.submit class: 'btn btn-primary' 
