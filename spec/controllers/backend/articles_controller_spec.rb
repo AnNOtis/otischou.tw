@@ -79,5 +79,4 @@ RSpec.describe Backend::ArticlesController do
       expect(article.reload.status).to eq("draft")
     end
   end
-
 end
