@@ -7,7 +7,16 @@ $bu: $line-height * $font-size; // basic unit
 
 $font-family-sans-serif: "Open Sans", helvetica, arial, "Heiti TC", "Microsoft YaHei", sans-serif;
 $font-family-serif: Georgia, Cambria, "Times New Roman", Times, "Hiragino Sans GB", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", serif;
-$font-family-content: $font-family-serif;
 $font-family-code: "Source Code Pro", monospace;
+$font-family-title: $font-family-serif;
+$font-family-content: $font-family-serif;
 
 $content-width:    800px;
+
+$c-text:       #333;
+$c-background: #fdfdfd;
+$c-brand:      #1646C2;
+
+$c-grey:       #828282;
+$c-grey-light: lighten($c-grey, 40%);
+$c-grey-dark:  darken($c-grey, 25%);

@@ -1,2 +1,6 @@
-h2 = article.title
-p = md article.content
+section.section.article
+  h2.article-title 
+    = link_to article.title, '#'
+  .article-date = article.created_at.strftime('%b %-d, %Y')
+  .article-content 
+    = md article.content

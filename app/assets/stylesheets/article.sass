@@ -1,0 +1,65 @@
+.article
+
+  .article-title
+    display: block
+    font-family: $font-family-title
+    text-align: center
+    padding-left: 2 * $bu
+    padding-right: 2 * $bu
+    margin-top: 1em
+
+  .article-title a
+    display: inline-block
+    position: relative
+    cursor: pointer
+    color: $c-text
+    border-bottom: none
+    text-decoration: none
+
+    &:hover
+      text-decoration: none
+    &:active,
+    &:visited,
+      color: $c-text
+
+    &:before,
+    &:after
+      transition: all 0.3s
+      display:inline-block
+      position: absolute
+      font-family: $font-family-code
+      opacity: 0
+      color: $c-grey
+      font-size: 0.5em
+      top: 0.75em
+
+    &:before
+      content: '->{ '
+      left: -3em
+      transform: translateX(-2em)
+
+    &:after
+      content: ' }'
+      right: -2em
+      transform: translateX(2em)
+
+    &:hover
+      &:after,
+      &:before
+        opacity: 1
+        transform: translateX(0)
+
+  .article-date
+    display: block
+    font-family: $font-family-code
+    font-weight: 200
+    text-align: center
+    color: #aaa
+
+  .article-content
+    display: block
+    font-family: $font-family-content
+    padding-left: 2 * $bu
+    padding-right: 2 * $bu
+    margin-top: $bu
+    margin-bottom: 3 * $bu
