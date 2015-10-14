@@ -1,4 +1,6 @@
 class Article < ActiveRecord::Base
+  extend FriendlyId
+
   # default scope
 
   # constant
@@ -12,11 +14,14 @@ class Article < ActiveRecord::Base
 
   # validation macros
   validates :title, presence: true
+  validates :slug, presence: true, uniqueness: true
 
   # callback macros
   before_create :set_default_status
+  before_validation :set_default_slug, on: :create
 
   # other macros
+  friendly_id :slug, use: :slugged
 
   # scope macros
 
@@ -28,9 +33,17 @@ class Article < ActiveRecord::Base
     update(status: :draft)
   end
 
+  def to_param
+    slug
+  end
+
   private
 
   def set_default_status
     self.status ||= :draft
+  end
+
+  def set_default_slug
+    self.slug ||= title.try(:parameterize)
   end
 end

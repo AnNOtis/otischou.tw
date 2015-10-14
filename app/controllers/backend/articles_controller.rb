@@ -30,7 +30,7 @@ module Backend
       if @article.save
         redirect_to backend_articles_path, notice: %(Create [#{@article.title}])
       else
-        redirect_to backend_articles_path, alert: %(@article.errors.full_messages.to_sentence)
+        redirect_to backend_articles_path, alert: @article.errors.full_messages.to_sentence
       end
     end
 
@@ -55,7 +55,7 @@ module Backend
     end
 
     def set_article
-      @article = Article.find(params[:id])
+      @article = Article.friendly.find(params[:id])
     end
   end
 end

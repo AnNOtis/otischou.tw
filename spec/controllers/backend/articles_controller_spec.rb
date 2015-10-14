@@ -37,7 +37,7 @@ RSpec.describe Backend::ArticlesController do
       xhr :post, :publish, format: :js, id: article.id
 
       expect(response).to have_http_status(:success)
-      expect(article.status).to eq(:publish)
+      expect(article.reload.status).to eq("publish")
     end
   end
 
@@ -47,7 +47,7 @@ RSpec.describe Backend::ArticlesController do
       xhr :post, :unpublish, format: :js, id: article.id
 
       expect(response).to have_http_status(:success)
-      expect(article.status).to eq(:draft)
+      expect(article.reload.status).to eq("draft")
     end
   end
 
