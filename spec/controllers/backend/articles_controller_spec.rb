@@ -6,10 +6,39 @@ RSpec.describe Backend::ArticlesController do
     end
   end
 
+  describe "GET#show" do
+    it do
+      article = Article.create(title: 'TEST')
+      get :show, id: article.id
+
+      expect(response).to have_http_status(:success)
+    end
+  end
+
+  describe "GET#edit" do
+    it do
+      article = Article.create(title: 'TEST')
+      get :edit, id: article.id
+      expect(response).to have_http_status(:success)
+    end
+  end
+
   describe "GET#new" do
     it do
       xhr :get, :new, format: :js
       expect(response).to have_http_status(:success)
+    end
+  end
+
+  describe 'PUT#update' do
+    let(:attributes) { { 'title' => 'AFTER UPDATE', 'content' => '# title   ## subtitle' } }
+
+    it do
+      article = Article.create(title: 'TEST')
+      put :update, id: article.id, article: attributes
+
+      expect(response).to redirect_to backend_article_path(article)
+      expect(article.reload.attributes.slice('title', 'content')).to eq(attributes)
     end
   end
 
