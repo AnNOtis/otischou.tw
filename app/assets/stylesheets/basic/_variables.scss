@@ -1,0 +1,13 @@
+$line-height: 1.8;
+$font-size: 16px;
+$font-size-m: 24px;
+$font-size-l: 32px;
+
+$bu: $line-height * $font-size; // basic unit
+
+$font-family-sans-serif: "Open Sans", helvetica, arial, "Heiti TC", "Microsoft YaHei", sans-serif;
+$font-family-serif: Georgia, Cambria, "Times New Roman", Times, "Hiragino Sans GB", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", serif;
+$font-family-content: $font-family-serif;
+$font-family-code: "Source Code Pro", monospace;
+
+$content-width:    800px;
