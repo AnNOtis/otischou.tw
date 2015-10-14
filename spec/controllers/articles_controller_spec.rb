@@ -5,4 +5,12 @@ RSpec.describe ArticlesController do
       expect(response).to have_http_status(:success)
     end
   end
+
+  describe 'GET#show' do
+    it do
+      article = Article.create(title: 'YO')
+      get :show, id: article
+      expect(response).to have_http_status(:success)
+    end
+  end
 end

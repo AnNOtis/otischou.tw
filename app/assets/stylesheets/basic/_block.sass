@@ -1,2 +1,113 @@
 body
   background-color: $c-background
+  color: $c-text
+  line-height: $line-height
+
+.article-content
+
+  p, pre, blockquote
+    margin: $bu 0
+
+  p
+    letter-spacing: 1px
+
+  /**
+   * Set `margin-bottom` to maintain vertical rhythm
+   */
+  h1, h2, h3, h4, h5, h6,
+  p, blockquote, pre,
+  ul, ol, dl, figure,
+  %vertical-rhythm
+    margin-top: $bu
+    margin-bottom: $bu
+
+  /**
+   * Images
+   */
+  img
+    max-width: 100%
+    vertical-align: middle
+
+  /**
+   * Figures
+   */
+  figure > img
+    display: block
+
+  figcaption
+    font-size: $font-size * 0.75
+
+  /**
+   * Lists
+   */
+  ul, ol
+    margin-left: 0
+
+  li
+    > ul,
+    > ol
+      margin-bottom: 0
+
+  /**
+   * Headings
+   */
+  h1, h2, h3, h4, h5, h6
+    font-weight: 400
+
+  /**
+   * Links
+   */
+  a
+    color: $c-second
+    text-decoration: none
+    font-weight: normal
+
+    &:visited
+      // color: darken($brand-color, 15%)
+
+
+    &:hover
+      color: darken($c-second, 10%)
+
+  /**
+   * Blockquotes
+   */
+  blockquote
+    color: $c-grey
+    border-left: 4px solid $c-grey-light
+    padding-left: $bu / 2
+    font-size: 18px
+    letter-spacing: -1px
+    font-style: italic
+    font-family: $font-family-code
+    font-weight: 200
+
+    > :last-child
+      margin-bottom: 0
+
+    > *
+      letter-spacing: -1px
+
+
+  /**
+   * Code formatting
+   */
+  pre,
+  code
+    font-size: 15px
+    border: 1px solid $c-grey-light
+    border-radius: 3px
+    background-color: #FFFFFA
+    font-family: $font-family-code
+
+  code
+    padding: 1px 5px
+
+  pre
+    padding: 8px 12px
+    overflow-x: scroll
+
+    > code
+      border: 0
+      padding-right: 0
+      padding-left: 0
