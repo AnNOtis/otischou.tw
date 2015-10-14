@@ -19,6 +19,7 @@ class Article < ActiveRecord::Base
   # callback macros
   before_create :set_default_status
   before_validation :set_default_slug, on: :create
+  before_validation :parameterize_slug
 
   # other macros
   friendly_id :slug, use: :slugged
@@ -45,5 +46,9 @@ class Article < ActiveRecord::Base
 
   def set_default_slug
     self.slug ||= title.try(:parameterize)
+  end
+
+  def parameterize_slug
+    self.slug = self.slug.try(:parameterize)
   end
 end

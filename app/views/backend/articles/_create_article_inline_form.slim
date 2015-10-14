@@ -6,6 +6,7 @@
       .modal-body
         .form-group
           = f.input :title, placeholder: 'article name', input_html: { class: 'form-control' }
+          = f.input :slug, placeholder: 'article friend_id', input_html: { class: 'form-control' }
       .modal-footer
         button.btn.btn-default type="button" data-dismiss="modal" Close
         = f.submit class: 'btn btn-primary' 
