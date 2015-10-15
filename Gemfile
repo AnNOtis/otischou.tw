@@ -17,8 +17,13 @@ gem 'font-awesome-sass', '~> 4.4.0'
 gem 'simple_form'
 
 gem 'kramdown'
-gem 'rouge'
 gem 'codemirror-rails'
+
+gem 'rouge', '~> 1.8'
+gem 'github-markdown'
+gem 'sanitize'
+gem 'html-pipeline-rouge_filter'
+gem 'html-pipeline'
 
 gem 'friendly_id', '~> 5.1.0'
 
