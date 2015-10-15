@@ -9,17 +9,22 @@ body
   line-height: $line-height
 
 .article-content
-
   p, pre, blockquote
     margin: $bu 0
 
   p
     letter-spacing: 1px
 
+  h1, h2
+    border-bottom: 1px solid $c-grey-light
+    margin-top: $bu * 1.4
+    margin-bottom: $bu * 0.6
+  h3, h4, h5, h6
+    margin-top: 1em
+    margin-bottom: 1em
   /**
    * Set `margin-bottom` to maintain vertical rhythm
    */
-  h1, h2, h3, h4, h5, h6,
   p, blockquote, pre,
   ul, ol, dl, figure,
   %vertical-rhythm
@@ -110,7 +115,7 @@ body
 
   pre
     padding: 8px 12px
-    overflow-x: scroll
+    overflow-x: auto
 
     > code
       border: 0
