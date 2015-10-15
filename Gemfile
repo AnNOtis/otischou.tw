@@ -24,6 +24,7 @@ gem 'github-markdown'
 gem 'sanitize'
 gem 'html-pipeline-rouge_filter'
 gem 'html-pipeline'
+gem 'twemoji'
 
 gem 'friendly_id', '~> 5.1.0'
 

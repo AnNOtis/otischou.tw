@@ -3,4 +3,4 @@ section.section.article
     = link_to article.title, article_path(article)
   .article-date = article.created_at.strftime('%b %-d, %Y')
   .article-content 
-    = md article.content
+    = md_with_summary article.content
