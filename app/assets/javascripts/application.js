@@ -19,3 +19,5 @@
 //= require codemirror/modes/xml
 //= require codemirror/modes/markdown
 //= require codemirror/modes/gfm
+
+Turbolinks.enableProgressBar();
