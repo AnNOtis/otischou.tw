@@ -21,3 +21,12 @@ $c-second:      #2993BF;
 $c-grey:       #828282;
 $c-grey-light: lighten($c-grey, 40%);
 $c-grey-dark:  darken($c-grey, 25%);
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}

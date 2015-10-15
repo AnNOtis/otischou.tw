@@ -1,0 +1,62 @@
+.footer
+  display: block
+  max-width: $content-width
+  margin-left: auto
+  margin-right: auto
+  color: #aaa
+  +media-query($on-palm)
+    .footer-social,
+    .footer-desc
+      text-align: center !important
+
+.footer-social
+  display: block
+  margin: 0
+  margin-bottom: 18px
+  padding: 0
+  line-height: $bu * 2
+  text-align: right
+  float: right
+  width: 45%
+  padding-right: 5%
+  +media-query($on-laptop)
+    width: 100%
+    text-align: center
+    padding-right: 0
+
+.footer-icon
+  display: inline-block
+  margin: 0 0.5em
+  text-decoration: none
+  border: 0
+  > svg
+    width: $bu * 0.8
+    height: $bu * 0.8
+    fill: $c-grey
+  &:hover
+    border: 0
+    &.icon--mail > svg > path
+      fill: #FC0
+    &.icon--github > svg > path
+      fill: #214966
+
+.footer-desc
+  text-align: left
+  margin: 0
+  margin-bottom: 18px
+  float: left
+  width: 45%
+  padding-left: 5%
+  +media-query($on-laptop)
+    width: 100%
+    text-align: center
+    padding-left: 0
+
+.footer-site
+  display: inline
+  font-size: 16px
+  color: #777
+
+.footer-slogan
+  font-size: 12px
+  line-height: 1.5
