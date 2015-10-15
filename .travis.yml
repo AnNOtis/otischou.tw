@@ -13,5 +13,5 @@ before_script:
 script:
   - bin/rspec
 addons:
-    code_climate:
-        repo_token: 17db1973745ae9f2382010cf904ba1c3cd031670282b1a7a03c7b915f4901588
+  code_climate:
+    repo_token: 17db1973745ae9f2382010cf904ba1c3cd031670282b1a7a03c7b915f4901588

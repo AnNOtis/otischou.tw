@@ -42,4 +42,5 @@ end
 group :test do
   gem 'shoulda-matchers'
   gem 'database_rewinder'
+  gem "codeclimate-test-reporter", group: :test, require: nil
 end
