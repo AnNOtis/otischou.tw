@@ -14,4 +14,4 @@ script:
   - bin/rspec
 addons:
     code_climate:
-        repo_token: ab65c2e2c5a5b16e6d84dc5d517a59b2951510b6ff292d87dfc935339f18f818
+        repo_token: 17db1973745ae9f2382010cf904ba1c3cd031670282b1a7a03c7b915f4901588
