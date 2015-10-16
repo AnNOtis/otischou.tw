@@ -8,14 +8,23 @@
     display: block
     position: relative
     width: $content-width * 7/10
-    padding: 28.8px
+    padding-left: bu()
+    padding-right: bu()
+    padding-top: bu()
+    padding-bottom: bu()
     float: left
     background-color: $c-main
+    font-family: $font-family-sans-serif
     @media print
       -webkit-print-color-adjust: exact
     .name
       color: #FDFDFD
-      color: 32px
+      font-size: 32px
+      line-height: 1
+    .title
+      font-size: $font-size-m
+      font-weight: normal
+      color: $c-grey-light
     .operation-bar
       display: inline-block
       position: absolute
@@ -46,6 +55,9 @@
       .info-item
         color: $c-grey
         font-family: $font-family-sans-serif
+        a
+          color: $c-grey
+          text-decoration: none
         .fa
           width: 20px
           text-align: center

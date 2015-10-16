@@ -1,15 +1,21 @@
 hedaer#header
   #left-block
     h1.name 周新捷 履歷
+    h2.title Ruby on Rails Developer
     .operation-bar
       = link_to '列印', 'javascript:window.print()', class: 'print-button' 
       .download 下載 PDF
   #right-block
     ul.info
-      li.info-item = icon('map-marker', 'Taipei, Taiwan')
-      li.info-item = icon('envelope', 'altispec@gmail.com')
+      li.info-item =icon('map-marker', 'Taipei, Taiwan')
+      li.info-item 
+        = link_to 'mailto:altispec@gmail.com' do
+          = icon('envelope', 'altispec@gmail.com')
       li.info-item = icon('phone-square', '0958460047')
-      li.info-item = icon('github-square', 'http://github.com/AnNOtis')
+      li.info-item 
+        = link_to 'http://github.com/AnNOtis' do
+          = icon('github-square', 'http://github.com/AnNOtis')
+        
 
 article#content
   .section
@@ -130,7 +136,7 @@ article#content
       .content
         h3 IDEAS Hackathon 2015
         .inline-tech
-          span.label Tech Used
+          .label Tech Used
           markdown:
             - Ruby on Rails
             - Redis
@@ -139,7 +145,7 @@ article#content
         markdown:
           藉由爬取各社群或新聞網站上的文章，嘗試歸納出社會上所正在發生的事件，自動建立實況台，讓民眾能夠追蹤事件進展，以多元的方式瞭解事情真相。
           
-          在團隊裡負責前端介面開發，實現 Websocket 聊天室，訊息推播 server 與相關 API 包裝，並改進資料擷取流程。
+          在團隊裡負責前端介面開發，實現 WebSocket 聊天室，訊息推播 server 與相關 API 包裝，並改進資料擷取流程。
     .section-body
       h2.title
         = link_to ' 菜色 Dish Color', 'http://dishcolor.com'
@@ -150,9 +156,9 @@ article#content
             = icon('github', '原始碼')
         .date 2015/02
       .content 
-        h3 2nd place, Alpha Hackathon 2015
+        h3 第二名, Alpha Hackathon 2015
         .inline-tech
-          span.label Tech Used
+          .label Tech Used
           markdown:
             - Ruby on Rails
             - Gauguin
@@ -172,7 +178,7 @@ article#content
         .date 2014/03
       .content
         .inline-tech
-          span.label Tech Used
+          .label Tech Used
           markdown:
             - Ruby on Rails
             - D3.js
