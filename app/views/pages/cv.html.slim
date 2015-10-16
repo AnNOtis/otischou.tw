@@ -1,6 +1,9 @@
 hedaer#header
   #left-block
-    h1.name 周新捷
+    h1.name 周新捷 履歷
+    .operation-bar
+      = link_to '列印', 'javascript:window.print()', class: 'print-button' 
+      .download 下載 PDF
   #right-block
     ul.info
       li.info-item = icon('map-marker', 'Taipei, Taiwan')
@@ -11,6 +14,50 @@ hedaer#header
 article#content
   .section
     .section-title title='Skill'
+    .skill.section-body
+      ul.skill-list
+        li.skill-subject 後端
+        li.skill-item Ruby              
+        li.skill-item Ruby on Rails     
+        li.skill-item Sinatra           
+        li.skill-item Minitest / RSpec  
+        li.skill-item Capistrano / Mina 
+        li.skill-item PostgrSQL         
+        li.skill-item Redis             
+        li.skill-item ElasticSearch     
+        li.skill-item Kibana                      
+        li.skill-item Logstash     
+      ul.skill-list
+        li.skill-subject 前端
+        li.skill-item HTML                 
+        li.skill-item Javascript           
+        li.skill-item CSS3                 
+        li.skill-item SASS                 
+        li.skill-item jQuery               
+        li.skill-item Bootstrap 3          
+        li.skill-item SVG(D3.js/Raphaël.js)
+        li.skill-item React.js             
+        li.skill-item Flux(Reflux)         
+      ul.skill-list
+        li.skill-subject 雲端服務
+        li.skill-item AWS EC2/S3/RDS/SNS       
+        li.skill-item AWS ElasticBeanstalk     
+        li.skill-item FireBase/Parse           
+        li.skill-item Rollbar                  
+        li.skill-item Google Analytics/Mixpanel
+      ul.skill-list
+        li.skill-subject 其他
+        li.skill-item Sketch
+        li.skill-item Proccessing
+        li.skill-item Java / JSP
+        li.skill-item Android
+        li.skill-item PHP / Codeigniter
+  .section
+    .section-title title='Education'
+    .section-body
+      h2.title
+        | 軟體工程學系, 國立高雄師範大學
+        .date 2009 - 2013
   .section
     .section-title title='Work Experience'
     .section-body
@@ -70,12 +117,6 @@ article#content
           - 擔任專案負責人，與其它公司合作在三個月內開發線上課程平台，供 12 所大學助教訓練使用
           - 公司產品教育訓練講師
   .section
-    .section-title title='Education'
-    .section-body
-      h2.title
-        | 軟體工程學系, 國立高雄師範大學
-        .date 2009 - 2013
-  .section
     .section-title title='Side Projects'
     .section-body
       h2.title
@@ -85,7 +126,7 @@ article#content
             = icon('github', '網站原始碼')
           = link_to 'https://github.com/TOEOS/Armstrong' do 
             = icon('github', '訊息推播原始碼')
-        .date 2015
+        .date 2015/07
       .content
         h3 IDEAS Hackathon 2015
         .inline-tech
@@ -96,10 +137,8 @@ article#content
             - EventMachine
             - WebSocket
         markdown:
-          主站: https://github.com/TOEOS/Armstrong
-          訊息推播Server: https://github.com/TOEOS/Apollo-radio
-
           藉由爬取各社群或新聞網站上的文章，嘗試歸納出社會上所正在發生的事件，自動建立實況台，讓民眾能夠追蹤事件進展，以多元的方式瞭解事情真相。
+          
           在團隊裡負責前端介面開發，實現 Websocket 聊天室，訊息推播 server 與相關 API 包裝，並改進資料擷取流程。
     .section-body
       h2.title
@@ -109,9 +148,9 @@ article#content
             = icon('link', '網站')
           = link_to 'https://github.com/Fool-Stack-Rangers/DishColor' do 
             = icon('github', '原始碼')
-        .date 2014
+        .date 2015/02
       .content 
-        h3 2nd place, Alpha Hackathon
+        h3 2nd place, Alpha Hackathon 2015
         .inline-tech
           span.label Tech Used
           markdown:
@@ -120,6 +159,7 @@ article#content
             - SVG
         markdown:
           分析料理的顏色，幫助使用者選擇今晚要下廚的菜色。
+          
           在團隊裡負責網站風格規劃、開發前端介面及使用者後台
     .section-body
       h2.title
@@ -129,7 +169,7 @@ article#content
             = icon('link', '網站')
           = link_to 'https://github.com/AnNOtis/PixelShowWebSite' do 
             = icon('github', '原始碼')
-        .date 2014
+        .date 2014/03
       .content
         .inline-tech
           span.label Tech Used
@@ -137,21 +177,27 @@ article#content
             - Ruby on Rails
             - D3.js
         markdown:
-          在學習 Rails 所做的第一個網站，這是一個 10x10 的 Pixel Art 編輯器，希望每個人都能享受塗鴉的樂趣。
+          在學習 Rails 所做的第一個網站，這是一個 Pixel Art 編輯器，希望每個人都能享受塗鴉的樂趣。
   .section
     .section-title title='Community'
     .section-body
       h2.title
         | Ruby 讀書會, 主辦人
-        .date 2015
+        .date 2015 - present
       .content
-        h3 每兩週舉辦一次，聚集對 Ruby 有熱情的夥伴，主要目標是深入了解 Ruby。
-        | 以分享過 [Metaprogramming Ruby](http://www.amazon.com/Metaprogramming-Ruby-Program-Like-Facets/dp/1941222129)，正在進行 [POODR](http://www.poodr.com/) 的分享
-
+        markdown:
+          每兩週舉辦一次，聚集對 Ruby 有熱情的夥伴，主要目標是深入了解 Ruby。
+          以經分享過 **[Metaprogramming Ruby](http://www.amazon.com/Metaprogramming-Ruby-Program-Like-Facets/dp/1941222129)**，正在進行 **[POODR](http://www.poodr.com/)** 的分享
 
     .section-body
       h2.title
         | Rails Girl Taipei, 4th/5th 教練
-        .date 2014
       .content
         | 嘗試回饋社群，幫助其他人踏入 Ruby on Rails 的世界
+    .section-body
+      h2.title
+        | Ruby on Rails 新手村
+        .date 2013 - present
+      .content
+        | 對 Rails 新手友善的社群，也是我學習 Rails 的起點，持續參與每週聚會已一年半。
+  
