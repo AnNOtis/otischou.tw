@@ -44,3 +44,7 @@ group :test do
   gem 'database_rewinder'
   gem "codeclimate-test-reporter", group: :test, require: nil
 end
+
+group :production do
+  gem 'rails_12factor'
+end
