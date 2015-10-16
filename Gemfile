@@ -30,6 +30,8 @@ gem 'twemoji'
 
 gem 'friendly_id', '~> 5.1.0'
 
+gem 'puma'
+
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.0'
