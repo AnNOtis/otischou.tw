@@ -14,7 +14,7 @@ class Article < ActiveRecord::Base
 
   # validation macros
   validates :title, presence: true
-  validates :slug, presence: true, uniqueness: true
+  validates :slug, presence: true, uniqueness: { case_sensitive: false }
 
   # callback macros
   before_create :set_default_status
