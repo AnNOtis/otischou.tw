@@ -1,5 +1,150 @@
 hedaer#header
-  h1 Otis Chou
+  #left-block
+    h1.name 周新捷
+  #right-block
+    ul.info
+      li.info-item = icon('map-marker', 'Taipei, Taiwan')
+      li.info-item = icon('envelope', 'altispec@gmail.com')
+      li.info-item = icon('phone-square', '0958460047')
+      li.info-item = icon('github-square', 'http://github.com/AnNOtis')
+
 article#content
   .section
-  
+    .section-title title='Skill'
+  .section
+    .section-title title='Work Experience'
+    .section-body
+      h2.title 
+        | Ruby on Rails Developer, 布魯貝克科技
+        .date 2014/08 - 2015/10
+      .content
+        markdown:
+          擔任 Ruby on Rails Developer，以及獨立負責前端需求。
+
+          ### 前端設計
+          <div class="inline-tech">
+            <span class="label">Tech Used</span>
+            <ul><li>SASS</li><li>React.js</li><li>Flux(reflux)</li><li>Sketch</li></ul>
+          </div>
+          - 美化與改進使用者介面，設計 Responsive Web Design
+          - 使用 React.js 開發高互動的 single page application
+          - 改進 CSS 組織方式，建立統一的命名風格。
+          - 使用 Sketch 繪製 APP 產品原型
+
+          ### 後端
+          <div class="inline-tech">
+            <span class="label">Tech Used</span>
+            <ul>
+              <li>Sinatra</li><li>Ruby on Rails</li><li>PostgreSQL</li><li>Elasticsearch</li>
+              <li>Rollbar</li><li>Capistrano and Mina</li><li>AWS(EC2, RDS, SNS, S3, Elastic Beanstalk)</li>
+              <li>Elasticsearch</li><li>Logstash</li><li>Kibana</li>
+            </ul>
+          </div>
+          - 開發與維護 Ruby on Rails 系統，以物件導向概念設計應用程式
+          - 將舊系統由 Node.js 改為使用 Ruby on Rails，重新設計 RESTful API 架構，
+          - 建置 Elasticsearch 搜尋系統
+          - 日常部署與架設日誌管理系統
+
+    .section-body
+      h2.title 
+        | Web Developer, 宏鼎資訊
+        .date 2013/07 - 2014/06
+      .content
+        .inline-tech
+          .label Tech Used
+          markdown:
+            - Java
+            - JSP
+            - Android
+            - PHP
+            - CodeIgniter
+            - HTML5
+            - Javascript
+            - CSS
+            - Oauth 2.0
+
+        markdown:
+          - 以 Oauth 2.0 協定建置授權平台
+          - 以 HTML5 技術開發高互動性的介面，學習 SVG、Canvas、CSS animation 與 CSS 3D 相關技術
+          - 獨立開發帳號管理系統，供北市 7 所學校使用
+          - 擔任專案負責人，與其它公司合作在三個月內開發線上課程平台，供 12 所大學助教訓練使用
+          - 公司產品教育訓練講師
+  .section
+    .section-title title='Education'
+    .section-body
+      h2.title
+        | 軟體工程學系, 國立高雄師範大學
+        .date 2009 - 2013
+  .section
+    .section-title title='Side Projects'
+    .section-body
+      h2.title
+        | 端點 Poin.me
+        .external-link 
+          = link_to 'https://github.com/TOEOS/Armstrong' do 
+            = icon('github', '網站原始碼')
+          = link_to 'https://github.com/TOEOS/Armstrong' do 
+            = icon('github', '訊息推播原始碼')
+        .date 2015
+      .content
+        h3 IDEAS Hackathon 2015
+        .inline-tech
+          span.label Tech Used
+          markdown:
+            - Ruby on Rails
+            - Redis
+            - EventMachine
+            - WebSocket
+        markdown:
+          主站: https://github.com/TOEOS/Armstrong
+          訊息推播Server: https://github.com/TOEOS/Apollo-radio
+
+          藉由爬取各社群或新聞網站上的文章，嘗試歸納出社會上所正在發生的事件，自動建立實況台，讓民眾能夠追蹤事件進展，以多元的方式瞭解事情真相。
+          在團隊裡負責前端介面開發，實現 Websocket 聊天室，訊息推播 server 與相關 API 包裝，並改進資料擷取流程。
+    .section-body
+      h2.title
+        = link_to ' 菜色 Dish Color', 'http://dishcolor.com'
+        .external-link 
+          = link_to 'http://dishcolor.com' do 
+            = icon('link', '網站')
+          = link_to 'https://github.com/Fool-Stack-Rangers/DishColor' do 
+            = icon('github', '原始碼')
+        .date 2014
+      .content 
+        h3 2nd place, Alpha Hackathon
+        .inline-tech
+          span.label Tech Used
+          markdown:
+            - Ruby on Rails
+            - Gauguin
+            - SVG
+        markdown:
+          分析料理的顏色，幫助使用者選擇今晚要下廚的菜色。
+          在團隊裡負責網站風格規劃、開發前端介面及使用者後台
+    .section-body
+      h2.title
+        = link_to 'PixelShow', 'http://pixelshow.io'
+        .external-link 
+          = link_to 'http://pixelshow.io' do 
+            = icon('link', '網站')
+          = link_to 'https://github.com/AnNOtis/PixelShowWebSite' do 
+            = icon('github', '原始碼')
+        .date 2014
+      .content
+        .inline-tech
+          span.label Tech Used
+          markdown:
+            - Ruby on Rails
+            - D3.js
+        markdown:
+          在學習 Rails 所做的第一個網站，這是一個 10x10 的 Pixel Art 編輯器，希望每個人都能享受塗鴉的樂趣。
+  .section
+    .section-title title='Community'
+    .section-body
+      h2.title
+        | 
+        .date 2009 - 2013
+    .section-body
+      h2.title
+        | 
+        .date 2009 - 2013
