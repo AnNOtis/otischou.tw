@@ -1,0 +1,52 @@
+#header
+  +block-center($content-width)
+  display: block
+  overflow: auto
+  margin-top: bu()
+  margin-bottom: bu(2)
+  #left-block
+    display: block
+    position: relative
+    width: $content-width * 7/10
+    padding: 28.8px
+    float: left
+    background-color: $c-main
+    @media print
+      -webkit-print-color-adjust: exact
+    .name
+      color: #FDFDFD
+      color: 32px
+    .operation-bar
+      display: inline-block
+      position: absolute
+      bottom: bu(0.5)
+      right: bu(0.5)
+      .download, .print-button, a.download, a.print-button
+        display: inline-block
+        padding: 0 10px
+        border-radius: 3px
+        background-color: $c-second
+        opacity: 0.7
+        color: #FFF
+        line-height: 30px
+        text-decoration: none
+        cursor: pointer
+        &:hover
+          transition: opacity 0.3s
+          opacity: 1
+  #right-block
+    display: block
+    width: $content-width * 3/10
+    float: right
+    .info
+      list-style: none
+      padding: 0
+      padding-left: 12px
+      margin: 0
+      .info-item
+        color: $c-grey
+        font-family: $font-family-sans-serif
+        .fa
+          width: 20px
+          text-align: center
+          color: $c-main

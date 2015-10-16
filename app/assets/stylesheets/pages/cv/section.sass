@@ -1,0 +1,71 @@
+.section
+  display: block
+  margin: bu(1) 0
+  .section-title
+    display: block
+    position: relative
+    color: lighten($c-main, 10%)
+    font-family: $font-family-title
+    font-weight: bold
+    margin-top: bu(2)
+    margin-bottom: bu()
+    &::after
+      content: ''
+      display: block
+      width: 100%
+      height: 2px
+      background-color: lighten($c-main, 10%)
+      @media print
+        -webkit-print-color-adjust: exact
+    &::before
+      content: attr(title)
+      display: block
+      position: absolute
+      left: bu(2)
+      top: - bu() / 2
+      padding-left: 16px
+      padding-right: 16px
+      background-color: #FFF
+
+  .section-body
+    display: block
+    padding: 0 16px
+
+    .title
+      display: block
+      position: relative
+      font-size: $font-size-m
+      font-weight: bold
+      line-height: 32px
+      margin-top: bu(1)
+      margin-bottom: 0
+      .date
+        display: inline-block
+        position: absolute
+        right: 0
+        top: 0
+        color: $c-grey
+        font-size: $font-size
+        line-height: 32px
+        font-family: $font-family-code
+        font-weight: 200
+
+    .content
+      color: #333
+      h3
+        font-size: $font-size
+        color: #555
+      p, ul
+        margin-top: bu(0.2)
+        margin-bottom: bu(0.3)
+    a
+      color: $c-main
+      text-decoration: none
+      &:hover
+        color: darken($c-main, 10%)
+    .external-link
+      display: inline-block
+      margin-left: bu()
+      a
+        font-size: 14px
+        margin-left: bu(0.5)
