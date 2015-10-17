@@ -5,7 +5,7 @@ html
     meta name='keywords' content='Ruby on Rails Developer, Otis Chou, CV, Resume, Taiwan, 周新捷, 履歷'
     meta name='description' content="I'm a Web Developer lived in taiwan. Good at Ruby, Ruby on Rails, HTML, Javascript and CSS."
     meta name='author' content='Otis Chou'
-    = stylesheet_link_tag 'pages/cv', media: 'all', 'data-turbolinks-track' => true
+    meta name="viewport" content="width=device-width, initial-scale=1"
     link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200, 400,700' rel='stylesheet' type='text/css'
     link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"
     link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"
@@ -24,5 +24,6 @@ html
     meta name="msapplication-TileColor" content="#ffffff"
     meta name="msapplication-TileImage" content="/ms-icon-144x144.png"
     meta name="theme-color" content="#ffffff"
+    = stylesheet_link_tag 'pages/cv', media: 'all', 'data-turbolinks-track' => true
   body
     = yield
