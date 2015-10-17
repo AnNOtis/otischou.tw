@@ -24,8 +24,15 @@
       left: 0
       top: - 12px
       padding-left: 0px
-      padding-right: 16px
+      padding-right: $font-size
       background-color: #FFF
+    +on-mobile
+      &::after
+      &::before
+        left: 50%
+        padding-left: $font-size
+        transform: translateX(-50%)
+
 
   .section-body
     display: block
@@ -50,6 +57,10 @@
         line-height: 32px
         font-family: $font-family-sans-serif
         font-weight: 200
+        +on-mobile
+          display: block
+          position: static
+
     .subtitle, h3
       font-family: $font-family-title
       font-size: $font-size
@@ -57,7 +68,9 @@
     .content
       color: #333
       margin-top: 12px
-      padding-right: 150px
+      padding-right: 140px
+      +on-mobile
+        padding-right: 0
       p, ul
         margin-top: 0
         margin-bottom: 0
@@ -73,4 +86,6 @@
       margin-left: bu()
       a
         font-size: 14px
-        margin-left: bu(0.5)
+        margin-right: bu(0.5)
+      +on-mobile
+        margin-left: 0

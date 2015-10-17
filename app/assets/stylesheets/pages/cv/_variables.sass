@@ -18,12 +18,17 @@ $c-grey:       #828282
 $c-grey-light: lighten($c-grey, 40%)
 $c-grey-dark:  darken($c-grey, 25%)
 
-=block-center($width)
-  width: $width
-  margin-left: auto
-  margin-right: auto
 
 $basic-unit: $font-size * $line-height
 
 @function bu($number: 1)
   @return $number * $basic-unit
+  
+=block-center($width)
+  width: $width
+  margin-left: auto
+  margin-right: auto
+
+=on-mobile()
+  @media screen and (max-width: $content-width + bu())
+    @content

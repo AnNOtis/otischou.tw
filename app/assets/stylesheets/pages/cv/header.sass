@@ -24,6 +24,7 @@
     .title
       font-size: $font-size-m
       font-weight: normal
+      font-family: $font-family-code
       color: $c-grey-light
     .operation-bar
       display: inline-block
@@ -64,3 +65,20 @@
           width: 20px
           text-align: center
           color: $c-main
+
++on-mobile
+  #header
+    width: auto
+    margin-top: 0
+    margin-bottom: 0
+    #left-block
+      width: auto
+      float: none
+      .operation-bar
+        display: none
+    #right-block
+      width: auto
+      float: none
+      .info
+        padding: 20px
+        background-color: #FFFDE0
